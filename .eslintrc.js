@@ -6,10 +6,10 @@ module.exports = {
   extends: ["eslint:recommended", "plugin:react/recommended"],
   overrides: [],
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["react", "jsx-a11y", "import"],
   rules: {
     "react/react-in-jsx-scope": 0,
     "import/extensions": 0,
