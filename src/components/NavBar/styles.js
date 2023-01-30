@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     marginLeft: '240px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
-      flexwrap: 'wrap',
+      flexWrap: 'wrap',
     },
   },
   menuButton: {

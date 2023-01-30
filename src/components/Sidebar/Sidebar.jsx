@@ -26,7 +26,7 @@ const redLogo = 'https://fontmeme.com/permalink/210930/8531c658a743debe1e1aa1a2f
 const blueLogo = 'https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png';
 
 // eslint-disable-next-line no-unused-vars
-function Sidebar({ setMobileOpen }) {
+const Sidebar = ({ setMobileOpen }) => {
   const theme = useTheme();
   const classes = useStyles();
 
@@ -36,7 +36,7 @@ function Sidebar({ setMobileOpen }) {
         <img
           className={classes.image}
           src={theme.palette.mode === 'light' ? redLogo : blueLogo}
-          alt="Filmpire Logo"
+          alt="Logo"
         />
       </Link>
       <Divider />
@@ -69,6 +69,6 @@ function Sidebar({ setMobileOpen }) {
       </List>
     </>
   );
-}
+};
 
 export default Sidebar;

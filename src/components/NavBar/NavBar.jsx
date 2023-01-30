@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import { Sidebar } from '..';
 import useStyles from './styles';
 
-function NavBar() {
+const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const classes = useStyles();
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -24,7 +24,7 @@ function NavBar() {
               color="inherit"
               edge="start"
               style={{ outline: 'none' }}
-              onClick={() => { }}
+              onClick={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               className={classes.menuButton}
             >
               <Menu />
@@ -66,21 +66,26 @@ function NavBar() {
               variant="temporary"
               anchor="right"
               open={mobileOpen}
+              onClose={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
+              className={classes.drawerBackground}
               classes={{ paper: classes.drawerPaper }}
               ModalProps={{ keepMounted: true }}
             >
               <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           ) : (
-            <Drawer classes={{ paper: classes.drawerPaper }} variant="permenant" open>
+            <Drawer
+              classes={{ paper: classes.drawerPaper }}
+              variant="permenant"
+              open
+            >
               <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           )}
-
         </nav>
       </div>
     </>
   );
-}
+};
 
 export default NavBar;
