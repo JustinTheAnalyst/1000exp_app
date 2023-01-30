@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const MovieInformation = () => {
+function MovieInformation() {
   return (
     <div>
       Movie Information
     </div>
-  )
+  );
 }
 
-export default MovieInformation
+export default MovieInformation;
